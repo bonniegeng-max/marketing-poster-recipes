@@ -1,12 +1,17 @@
 ---
 name: marketing-poster-recipes
-version: 0.1.1
+version: 1.0.0
+display_name: 营销海报配方库
+display_name_en: Marketing Poster Recipes
+author: bonniegeng-max
 description: |
   做什么：营销海报配方库——从广告创意配方卡库选卡填槽，生成可直接用于小红书/朋友圈/电商的 3:4 竖版营销海报（超现实微观合成、极简手绘小剧场、诗意复古印刷、人物手持产品光影四类起步），可选先跑 12 套广告创意头脑风暴定方向，附卖点提炼、Slogan 生成与广告红线审查。
   何时触发：用户说「给这个产品做张海报/营销图/种草图/广告创意图/营销生图」「把这张产品照片做成海报」「帮我出广告创意方案和配图」「用超现实/手绘/复古印刷风格给产品生图」「给我的产品做张小红书封面」等。
   何时不用：NOT for：纯广告文案写作（无出图需求，直接用 references/copywriting-prompts.md 的模板即可）、漫画/绘本/分镜叙事创作（转 text-to-comic）、反推参考图风格建风格卡（转 style-card）、一次性 prompt 润色、生成视频/动图（即梦路径，本 skill 不覆盖）。
   依赖：ImageGen 生图工具（约 5-10 积分/张，生成前必须告知用户并确认）；图生图类卡（hand-drawn-theater / retro-print-poem）需用户上传产品照片。
   降级：生图工具不可用或用户不想耗积分时，输出「选卡建议 + 填好槽的完整 prompt」，供用户手动投喂豆包/即梦等工具，效果等价。
+description_zh: 从广告创意配方卡库选卡填槽，生成可直接用于小红书/朋友圈/电商的 3:4 竖版营销海报，附卖点提炼、Slogan 生成与广告红线审查。
+description_en: Pick a recipe card from the ad-creative library, fill the slots, and generate 3:4 vertical marketing posters for social media and e-commerce, with selling-point extraction, slogan generation, and ad-compliance review.
 ---
 
 # Marketing Poster Recipes · 营销海报配方库
