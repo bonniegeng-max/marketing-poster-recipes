@@ -6,7 +6,7 @@ display_name_en: Marketing Poster Recipes
 author: bonniegeng-max
 description: |
   做什么：营销海报配方库——从广告创意配方卡库选卡填槽，生成可直接用于小红书/朋友圈/电商的 3:4 竖版营销海报（超现实微观合成、极简手绘小剧场、诗意复古印刷、人物手持产品光影四类起步），可选先跑 12 套广告创意头脑风暴定方向，附卖点提炼、Slogan 生成与广告红线审查。
-  何时触发：用户说「给这个产品做张海报/营销图/种草图/广告创意图/营销生图」「把这张产品照片做成海报」「帮我出广告创意方案和配图」「用超现实/手绘/复古印刷风格给产品生图」「给我的产品做张小红书封面」等。
+  何时触发：用户说「给这个产品做张海报/营销图/种草图/广告创意图/营销生图」「把这张产品照片做成海报」「帮我出广告创意方案和配图」「用超现实/手绘/复古印刷风格给产品生图」「给我的产品做张小红书封面」等。液体/酱体/膏体类产品（番茄酱、蜂蜜、巧克力、咖啡、酱料、沐浴露等）要「氛围感+设计感+反重力定格」→ 优先路由到 surreal-frozen-liquid 卡。
   何时不用：NOT for：纯广告文案写作（无出图需求，直接用 references/copywriting-prompts.md 的模板即可）、漫画/绘本/分镜叙事创作（转 text-to-comic）、反推参考图风格建风格卡（转 style-card）、一次性 prompt 润色、生成视频/动图（即梦路径，本 skill 不覆盖）。
   依赖：ImageGen 生图工具（约 5-10 积分/张，生成前必须告知用户并确认）；图生图类卡（hand-drawn-theater / retro-print-poem）需用户上传产品照片。
   降级：生图工具不可用或用户不想耗积分时，输出「选卡建议 + 填好槽的完整 prompt」，供用户手动投喂豆包/即梦等工具，效果等价。
@@ -33,7 +33,7 @@ marketing-poster-recipes/
 ├── SKILL.md                  # 本文件（工作流地图，每次必读）
 ├── library/
 │   ├── INDEX.md              # 配方卡索引（选卡前必读）
-│   └── cards/*.md            # 5 张配方卡正文（选哪张读哪张）
+│   └── cards/*.md            # 6 张配方卡正文（选哪张读哪张）
 ├── references/
 │   ├── marketing-method.md   # 广告方法论：三要素/卖点体检/记忆点三问/验收标准（生成后验收必读）
 │   ├── copywriting-prompts.md# Day1 六段文案 prompt 模板（补槽/Slogan/红线审查时读）
@@ -60,7 +60,7 @@ marketing-poster-recipes/
 
 1. 有产品照片？
    - 有 → `hand-drawn-theater`（要可爱互动感）或 `retro-print-poem`（要高级复古感）
-   - 无 → `surreal-micro-world`（要创意冲击/脑洞）或 `product-in-hand`（要时尚大片感）
+   - 无 → `surreal-micro-world`（要创意冲击/脑洞·尺度反差）或 `surreal-frozen-liquid`（要氛围感/设计感·液体定格）或 `product-in-hand`（要时尚大片感）
 2. 卖点抽象（轻/快/滑/治愈）？→ 建议视觉比喻思路（见 patterns.md P4）；痛点清晰可放大？→ 建议痛点放大（P3），配 `surreal-micro-world`
 3. 用户指定风格关键词 → 直接路由到对应卡；两张卡拿不准 → 展示 INDEX.md 的对比说明让用户选
 
@@ -112,7 +112,7 @@ marketing-poster-recipes/
 
 ## 正反触发测试
 
-- **应触发**：「给这瓶番茄酱做张超现实风格的营销海报」→ 进入选卡（surreal-micro-world），填四槽，告知积分后生成
+- **应触发**：「给这瓶番茄酱做张超现实风格的营销海报」→ 进入选卡（无照片·液体类产品 → surreal-frozen-liquid；若卖点可做尺度反差则 surreal-micro-world），填槽，告知积分后生成
 - **不应触发**：「帮我把这段 prompt 改得好一点」→ 拒绝（一次性润色无复用价值）；「把这张图画风总结一下」→ 转 style-card
 
 ## 增量维护（回炉岗预留）

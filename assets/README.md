@@ -1,6 +1,6 @@
 # assets · 案例参考图（验收参照物）
 
-> 来源：本库自生成的原创案例图（2026-11-26 生成），无第三方版权风险。共 5 张。
+> 来源：本库自生成的原创案例图（2026-11-26 生成），无第三方版权风险。共 6 张。
 
 ## 清单
 
@@ -11,6 +11,7 @@
 | milkshake-original.png | hand-drawn-theater / retro-print-poem | ↑ 两卡的**输入原图**（草莓奶昔产品照，对照改造幅度） |
 | retro-milkshake-joyful.png | retro-print-poem | JOYFUL·奶昔：大字衬线+半调网点+穿字效果 |
 | product-in-hand-milkshake.png | product-in-hand | 奶昔：低机位仰拍+前景锐利+手指正常 |
+| surreal-frozen-liquid-ketchup.png | surreal-frozen-liquid | 番茄酱：瓶正立+酱流喷涌凝固成番茄雕塑+番茄环绕（带「凝固的一瞬」标题精修成品） |
 
 ## 用法
 
