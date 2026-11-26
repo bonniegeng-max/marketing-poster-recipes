@@ -1,6 +1,6 @@
 ---
 name: marketing-poster-recipes
-version: 1.0.0
+version: 1.1.0
 display_name: 营销海报配方库
 display_name_en: Marketing Poster Recipes
 author: bonniegeng-max
