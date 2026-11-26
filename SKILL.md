@@ -115,6 +115,17 @@ marketing-poster-recipes/
 - **应触发**：「给这瓶番茄酱做张超现实风格的营销海报」→ 进入选卡（无照片·液体类产品 → surreal-frozen-liquid；若卖点可做尺度反差则 surreal-micro-world），填槽，告知积分后生成
 - **不应触发**：「帮我把这段 prompt 改得好一点」→ 拒绝（一次性润色无复用价值）；「把这张图画风总结一下」→ 转 style-card
 
-## 增量维护（回炉岗预留）
+## 增量维护与发布纪律（改卡/加卡后必走）
 
-新配方来源：AIGC 广告创意课程 Day3-5（预计含视频/即梦方向）。流程：拉新资料包 → 按本库卡片模板萃取新卡 → 入库并同步 INDEX.md → bump 版本 → 本地 git commit（不 push）→ 打 zip 传资料库存档。
+**新配方来源**：AIGC 广告创意课程 Day3-5（预计含视频/即梦方向）。
+
+**加卡/改卡的完整闭环（缺一不可，见 `CONTRIBUTING.md` 详细清单）**：
+
+1. 按卡片模板萃取新卡 → 入库 `library/cards/`，同步 `INDEX.md`
+2. **跑隐私闸门**（`~/.workbuddy/notes/skill-publish-guard/scan.sh`，隐私项 0 命中才继续）
+3. bump 版本（加卡=minor +0.1，如 1.1.0 → 1.2.0；SKILL.md frontmatter + README 三处同步）
+4. 本地 git commit → **push 到 GitHub**（别停在"commit 不 push"，会沉底）
+5. 重新 publish ClawHub（`clawhub skill publish . --version <新版本> --changelog "..."`）
+6. 打 zip 回传资料库（`~/.workbuddy/skills/` 外的归档节点，外层只留最新一个 zip）
+
+**红线提醒**：skill 可能被**其它对话里的助手**改动（新增卡/改文件），改完往往**不跑闸门、不 bump、不 push**。任何一次改完，主动核查 git 状态（`git status` 是否领先 origin）与版本号是否三处一致，把漏掉的步骤补完。
