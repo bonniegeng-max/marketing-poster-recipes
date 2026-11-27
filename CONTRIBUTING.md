@@ -9,7 +9,7 @@
 ### 1. 跑隐私闸门（硬门槛，退出码语义）
 
 ```bash
-~/.workbuddy/notes/skill-publish-guard/scan.sh ~/.workbuddy/skills/marketing-poster-recipes
+<你的隐私闸门脚本路径> <本 skill 所在目录>
 ```
 
 - **退出码 1**（隐私命中）→ 禁止发布，先清理
@@ -29,7 +29,7 @@
 ### 3. git commit + push（别只 commit）
 
 ```bash
-cd ~/.workbuddy/skills/marketing-poster-recipes
+cd <本 skill 所在目录>
 git add -A
 git commit -m "feat/chore: <说明>"
 # 网络代理坑：若 push 报 HTTP2 framing / 502，用下面这条绕过
@@ -41,7 +41,7 @@ git -c http.version=HTTP/1.1 -c http.proxy= -c https.proxy= push origin main
 ### 4. 重新 publish ClawHub
 
 ```bash
-cd ~/.workbuddy/skills/marketing-poster-recipes
+cd <本 skill 所在目录>
 clawhub skill publish . --version <新版本> --changelog "<一句话说明>"
 ```
 
@@ -53,7 +53,7 @@ clawhub skill publish . --version <新版本> --changelog "<一句话说明>"
 打包要求：zip 第一层直接是 `SKILL.md`（不能多套一层目录），跳过 `.git` 和隐藏文件。
 
 ```bash
-cd ~/.workbuddy/skills/marketing-poster-recipes
+cd <本 skill 所在目录>
 python3 -c "
 import zipfile, os
 out = '/tmp/marketing-poster-recipes-v<VERSION>.zip'
